@@ -70,7 +70,6 @@ const productsData: Record<string, Product> = {
     icon: Pill,
     image: '/images/pharma/pharma2.png',
     gallery: [
-      '/images/pharma/pharma1.png',
       '/images/pharma/pharma2.png',
       '/images/pharma/pharma3.png',
       '/images/pharma/pharma4.png',
@@ -110,7 +109,6 @@ const productsData: Record<string, Product> = {
     icon: Users,
     image: '/images/crm/crm2.png',
     gallery: [
-      '/images/crm/crm1.png',
       '/images/crm/crm2.png',
       '/images/crm/crm3.png',
       '/images/crm/crm4.png',
