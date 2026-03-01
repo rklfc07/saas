@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -8,11 +8,17 @@ import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import './App.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   useEffect(() => {
-    // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
-    
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
     };
@@ -20,6 +26,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-dark text-white overflow-x-hidden">
         <Navbar />
         <main>
